@@ -1,0 +1,23 @@
+I"�<h2 id="2020-03-30">2020-03-30</h2>
+
+<h3 id="01-jekyll-기본-테마인-minima-theme-다운로드">01. Jekyll 기본 테마인 Minima Theme 다운로드</h3>
+<h3 id="02-layout-includes-assets-sass-파일-가져오기">02. Layout, Includes, Assets, Sass 파일 가져오기</h3>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bundle</span> <span class="n">show</span> <span class="n">minima</span> <span class="c1">// Minima 테마의 파일들이 저장된 위치를 보여준다.</span>
+</code></pre></div></div>
+<h3 id="03-bootstrap을-이용하기-위해-head에-css-링크를-body에-javascript-링크를-넣어주기">03. Bootstrap을 이용하기 위해 Head에 CSS 링크를, Body에 JavaScript 링크를 넣어주기.</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- _includes/head.html 의 Head 태그 안에 코드 삽입--&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- _layouts/default.html 의 Body 태그 마지막 부분에 코드 삽입 --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<ol>
+  <li>Test</li>
+</ol>
+
+:ET

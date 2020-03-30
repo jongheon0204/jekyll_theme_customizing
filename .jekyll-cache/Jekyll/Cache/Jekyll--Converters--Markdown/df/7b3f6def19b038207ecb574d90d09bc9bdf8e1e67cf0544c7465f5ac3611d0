@@ -1,0 +1,26 @@
+I"\<h1 id="2020-03-30">2020-03-30</h1>
+
+<ol>
+  <li>Jekyll 기본 테마인 Minima Theme 다운로드</li>
+  <li>Layout, Includes, Assets, Sass 파일 가져오기
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle show minima // Minima 테마의 파일들이 저장된 위치를 보여준다.
+</code></pre></div>    </div>
+  </li>
+  <li>Bootstrap을 이용하기 위해 Head에 CSS 링크를, Body에 JavaScript 링크를 넣어주기.
+```
+<!-- _includes/head.html 의 Head 태그 안에 코드 삽입--></li>
+</ol>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css" />
+
+<p>```</p>
+<ol>
+  <li>Test</li>
+</ol>
+
+:ET
