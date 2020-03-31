@@ -1,0 +1,37 @@
+<nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+
+	<a class = "navbar-brand" href="#">{{site.title}}</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    		<ul class="navbar-nav mr-auto">
+
+			{% assign categories = site.html_pages | where_exp: "page","page.appear == true" | sort : 'order' %}
+			{% for category in categories %}
+				{% assign title = category.title %}
+
+				{% if page.url != category.permalink %}
+					{% assign link = category.permalink %}
+				{% else %}
+					{% assign link = '#' %}
+				{% endif %}
+
+				{% if page.url == '/' and title == 'Home' %}
+					{% assign link = '#' %}
+				{% endif %}
+
+				{% if link == '#' %}
+					{% assign li_class = 'active' %}
+				{% else %}
+					{% assign li_class = '' %}
+				{% endif %}
+
+				<li class = "nav-item {{li_class}}">
+					<a class = "nav-link" href={{link}}>{{title}}</a>
+			</li>{% endfor %}
+
+		</ul>
+	</div>
+</nav>
