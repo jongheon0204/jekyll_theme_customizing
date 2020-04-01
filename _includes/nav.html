@@ -7,31 +7,46 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
     		<ul class="navbar-nav mr-auto">
+		{% assign categories = site.html_pages | where_exp: "page","page.appear == true" | sort : 'order' %}
+		{% for category in categories %}
+			{% assign title = category.title %}
 
-			{% assign categories = site.html_pages | where_exp: "page","page.appear == true" | sort : 'order' %}
-			{% for category in categories %}
-				{% assign title = category.title %}
+			{% if page.categories contains category.categories %}
+				{% assign link = '#' %}
+			{% else %}
+				{% assign link = category.permalink %}
+			{% endif %}
 
-				{% if page.url != category.permalink %}
-					{% assign link = category.permalink %}
-				{% else %}
-					{% assign link = '#' %}
-				{% endif %}
+			{% if page.url == '/' and title == 'Home' %}
+				{% assign link = '#' %}
+			{% endif %}
 
-				{% if page.url == '/' and title == 'Home' %}
-					{% assign link = '#' %}
-				{% endif %}
+			{% if link == '#' %}
+				{% assign li_class = 'active' %}
+			{% else %}
+				{% assign li_class = '' %}
+			{% endif %}
 
-				{% if link == '#' %}
-					{% assign li_class = 'active' %}
-				{% else %}
-					{% assign li_class = '' %}
-				{% endif %}
+			{% if title != 'Home' %}
+				{% assign drop_class = 'dropdown' %}
+			{% else %}
+				{% assign drop_class = '' %}
+			{% endif %}
 
-				<li class = "nav-item {{li_class}}">
-					<a class = "nav-link" href={{link}}>{{title}}</a>
-			</li>{% endfor %}
-
+			<li class = "nav-item {{li_class}} {{drop_class}}">
+			{% if drop_class == 'dropdown' %}
+				<a class = "nav-link dropdown-toggle" id="navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{title}}</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				{% assign sub_categories = site.html_pages | where: "parent",category.categories | sort: 'order' %}
+				{% for sub_category in sub_categories %}
+					<a class = "dropdown-item" href={{sub_category.permalink}}>{{sub_category.title}}</a>
+				{% endfor %}
+				</div>
+			{% else %}
+				<a class = "nav-link" href="{{link}}">{{title}}</a>
+			{% endif %}
+			</li>
+		{% endfor %}
 		</ul>
 	</div>
 </nav>

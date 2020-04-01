@@ -101,3 +101,103 @@ permalink: /project
 ---
 ```
 ![Navigation 적용](https://user-images.githubusercontent.com/17156386/78041726-0d202100-73ac-11ea-94fe-5bbead6e969f.png)
+
+## 2020-04-01
+
+### 01. 이중 카테고리 작업을 위한 Navigation Bar 수정
+
+카테고리들이 많아질 경우를 대비해서 카테고리들을 묶는 카테고리 즉 이중 카테고리를 적용하자는 생각이 들어 작업을 하게 되었다.
+<br>Navigation Bar에 있는 카테고리를 이요하여 추가 작업을 해 주었는데 먼저 Home 부분과 다른 카테고리를 분류하는 작업을 통해 Home을 클릭시 메인 페이지로 이동하게 해 주었고, 다른 카테고리를 클릭시 Dropdown 방식으로 서브 카테고리들을 선택할 수 있도록 해 주었다.
+
+```html
+<!-- ../_includes/nav.html Navigation Bar {% if link == '#'} 구문 다음에 적용 -->
+
+<!-- 해당 카테고리를 보고 클릭한 경우 active 클래스 적용 -->
+{% if page.categories contains category.categories %}
+	{% assign link = '#' %}
+{% else %}
+	{% assign link = category.permalink %}
+{% endif %}
+
+<!-- 카테고리의 이름이 Home이 아니면 Dropdown을 적용한다 -->
+{% if title != 'Home' %}
+	{% assign drop_class = 'dropdown' %}
+{% else %}
+	{% assign drop_class = '' %}
+{% endif %}
+
+<!-- 카테고리들을 네비게이션에서 표시하기 -->
+<li class = "nav-item {{li_class}} {{drop_class}}">
+{% if drop_class == 'dropdown' %}
+<!-- Dropdown을 적용 -->
+	<a class = "nav-link dropdown-toggle" id="navbarDropdown" role = "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{title}}</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<!-- 이중 카테고리를 위해 해당 카테고리 이름을 이용하여 서브 카테고리들을 가져온다 -->
+	{% assign sub_categories = site.html_pages | where: "parent",category.categories | sort: 'order' %}
+	{% for sub_category in sub_categories %}
+		<a class = "dropdown-item" href={{sub_category.permalink}}>{{sub_category.title}}</a>
+	{% endfor %}
+	</div>
+{% else %}
+<!-- 카테고리 이름이 Home인 경우에는 메인 페이지로 이동할 수 있도록 해준다 -->
+	<a class = "nav-link" href="{{link}}">{{title}}</a>
+{% endif %}
+</li>
+```
+![Dropdown 적용](https://user-images.githubusercontent.com/17156386/78143634-7d40ac80-7469-11ea-962c-f5910bc903ba.png)
+
+### 02. 카테고리에 속하는 post들만 보여주기
+
+카테고리들을 분류해 주었다면 이제는 해당 카테고리를 클릭시 그에 해당하는 포스트들만 보여주는 작업을 진행 하였다.
+<br>포스트는 생성시 자동으로 카테고리가 분류가 되니 현재 보고있는 카테고리에 속하는 포스트들만 가져오는 작업을 해주면 된다.
+<br>이때, 메인 홈페이지와 분류하기 위해서 ../\_includes 폴더에 blog.html 레이아웃을 추가해 주었다.
+
+```html
+<!-- ../_inicludes/blog.html 파일 생성 후 작업 -->
+
+<!-- ../_includes/default.html 파일의 {{content}}에 해당 파일 내용을 추가 -->
+---
+layout: default
+---
+
+<!-- 모든 포스터들을 생성일 반대 순서로 가져온다 -->
+{% assign posts = site.posts | "sort: 'date' | reverse %}
+<div class="home">
+
+{%- if page.title -%}
+	<h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+	
+{{ content }}
+	
+<!-- 포스트 개수가 1개 이상일 경우 -->
+{% if psts.size > 0 %}
+	<ul class="post-list">
+	{% for post in posts %}
+	<!-- 현재 페이지의 카테고리에 해당하는 포스트들만 나타낸다 -->
+	{% if post.categories == page.categories %}<li>
+		{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+		<span class="post-meta">{{post.date | date: date_format}}</span>
+		<h3>
+			<a class="post-link" href="{{post.url | relative_url}}">{{post.title | escape}}</a>
+		</h3>
+	</li>{% endif %}
+	{% endfor %}
+	{%- if site.show_excerpts -%}
+		{{ post.excerpt }}
+	{%- endif -%}
+	</ul>
+{%- endif -%}
+</div>
+```
+
+```markdown
+---
+layout: blog
+title: Github Blog
+parent: project
+permalink: /project/github_blog
+categories: [project,github_blog]
+---
+<!-- category 와 parent를 설정해 주어야 한다 -->
+```
