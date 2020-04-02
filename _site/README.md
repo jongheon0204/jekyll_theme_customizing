@@ -7,14 +7,14 @@ bundle show minima // Minima 테마의 파일들이 저장된 위치를 보여�
 ```
 ### 03. Bootstrap을 이용하기 위해 Head에 CSS 링크를, Body에 JavaScript 링크를 넣어주기.
 ```html 
-<!-- _includes/head.html 의 Head 태그 안에 코드 삽입-->
+<!-- ./_includes/head.html 의 Head 태그 안에 코드 삽입-->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ```
 ```html
-<!-- _layouts/default.html 의 Body 태그 마지막 부분에 코드 삽입 -->
+<!-- ./_layouts/default.html 의 Body 태그 마지막 부분에 코드 삽입 -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@ bundle show minima // Minima 테마의 파일들이 저장된 위치를 보여�
 <br>Bootstrap의 Navigation Bar에 적용되는 클래스를 이용할 계획이며, 이후 Dropdown 기능을 추가하여 서브 카테고리를 선택할 수 있도록 할 예정이다.
 
 ```html
-<!-- ../_includes/nav.html  Navigation Bar 관련 코드를 따로 정리 -->
+<!-- ./_includes/nav.html  Navigation Bar 관련 코드를 따로 정리 -->
 <nav class = "navbar navbar-expand-lg navbar-dark bg-dark"> 
 
 <!-- 화면 크기가 작아 졌을때 navbar-brand만 보인다 -->
@@ -72,7 +72,7 @@ bundle show minima // Minima 테마의 파일들이 저장된 위치를 보여�
 ```
 
 ```html
-<!-- /..includes/header.html -->
+<!-- ./_includes/header.html -->
 <header class="site-header" role="banner">
 <!-- nav.html에 작성한 코드를 header 태그안에 포함 -->
 	{% include nav.html %}
@@ -80,7 +80,7 @@ bundle show minima // Minima 테마의 파일들이 저장된 위치를 보여�
 ```
 
 ```markdown
-<!-- /index.markdown -->
+<!-- ./index.markdown -->
 ---
 layout: home
 title: Home
@@ -91,7 +91,7 @@ permalink: /
 ```
 
 ```markdown
-<!-- /project/index.md -->
+<!-- ./project/index.md -->
 ---
 layout: home 
 title: Project
@@ -110,7 +110,7 @@ permalink: /project
 <br>Navigation Bar에 있는 카테고리를 이요하여 추가 작업을 해 주었는데 먼저 Home 부분과 다른 카테고리를 분류하는 작업을 통해 Home을 클릭시 메인 페이지로 이동하게 해 주었고, 다른 카테고리를 클릭시 Dropdown 방식으로 서브 카테고리들을 선택할 수 있도록 해 주었다.
 
 ```html
-<!-- ../_includes/nav.html Navigation Bar {% if link == '#'} 구문 다음에 적용 -->
+<!-- ./_includes/nav.html Navigation Bar {% if link == '#'} 구문 다음에 적용 -->
 
 <!-- 해당 카테고리를 보고 클릭한 경우 active 클래스 적용 -->
 {% if page.categories contains category.categories %}
@@ -144,7 +144,6 @@ permalink: /project
 {% endif %}
 </li>
 ```
-![Dropdown 적용](https://user-images.githubusercontent.com/17156386/78143634-7d40ac80-7469-11ea-962c-f5910bc903ba.png)
 
 ### 02. 카테고리에 속하는 post들만 보여주기
 
@@ -153,9 +152,9 @@ permalink: /project
 <br>이때, 메인 홈페이지와 분류하기 위해서 ../\_includes 폴더에 blog.html 레이아웃을 추가해 주었다.
 
 ```html
-<!-- ../_inicludes/blog.html 파일 생성 후 작업 -->
+<!-- ./_inicludes/blog.html 파일 생성 후 작업 -->
 
-<!-- ../_includes/default.html 파일의 {{content}}에 해당 파일 내용을 추가 -->
+<!-- ./_includes/default.html 파일의 {{content}}에 해당 파일 내용을 추가 -->
 ---
 layout: default
 ---
@@ -201,3 +200,138 @@ categories: [project,github_blog]
 ---
 <!-- category 와 parent를 설정해 주어야 한다 -->
 ```
+
+![Dropdown 적용](https://user-images.githubusercontent.com/17156386/78143634-7d40ac80-7469-11ea-962c-f5910bc903ba.png)
+
+## 2020-04-02
+
+### 01. Codepen에 있는 Blog Layout 적용
+
+[Blog Layout 주소](https://codepen.io/russbeye/pen/MYeroq)
+![레이아웃](https://user-images.githubusercontent.com/17156386/78219444-8037ad80-74fa-11ea-955b-c36be3a27afd.png)
+
+[Codepen](https://codepen.io/)은 다른 사람들이 제작한 웹 사이트 레이아웃과 코드를 확인할 수 있는 사이트 입니다.
+<br>기존의 포스트 목록을 변경해 주기 위해서 Blog Layout을 검색하여 찾던 도중 발견하였고 이 css를 제 Blog에 적용해 보았습니다.
+
+Jekyll에 CSS를 적용하기 위해서는 SCSS파일을 만들어 CSS 코드를 넣어주면 자동으로 \_site의 assets폴더에 css파일이 생성이 됩니다. 
+
+#### 순서
+1. ./assets 폴더에 blog.scss 파일을 만들어 준 후, Codepen 사이트의 css 코드를 복사합니다.
+2. 포스트들의 목록을 나타내는 ./\_layouts/blog.html 파일의 코드 Codepen 사이트의 html 코드를 참조하여 변경해줍니다.
+
+```css
+/* ./assets/blog.scss */
+/* Codepen에서 가져온 코드에 변경 부분만을 현재 나타냈습니다 */
+
+/* sass을 사용하기 위해서는 ---을 꼭 해주어야 한다 */
+---
+---
+
+/* Minima 테마의 css와의 호환 문제로 id값을 통해 body에 배경색을 지정 */
+#blog-body{
+	background: #e5ded8;
+	box-sizing: border-box;
+}
+
+/* background: url안에 보여주고 싶은 프로필 사진을 넣으면 된다  */
+.blog-author h3::before,
+.blog-author--no-cover h3::before {
+	background: url("https://pbs.twimg.com/profile_images/1211311075871739905/UsXtIgky_400x400.jpg");
+	background-size: cover;
+	border-radius: 50%;
+	content: " ";
+	display: inline-block;
+	height: 32px;
+	margin-right: .5rem;
+	position: relative;
+	top: 8px;
+	width: 32px;
+}
+
+/* 폰트의 굵기를 따로 조절해 주었다 */
+.blog-title h1 a {
+	color: #333;
+	font-weight: 400;
+}
+
+/* 요약 부분과 밑에 부분이 너무 붙어있길래 padding-bottom으로 조절해 주었다. */
+.blog-summary p {
+	color: lighten(#333, 10%);
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+}
+
+/* tag를 하나씩 보여주기 위해서 몇 가지 변경 */
+.blog-tags ul {
+	border-top: 1px solid lighten(#333,70%);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-left: 0;
+	padding-bottom: 10px;
+	width: 80%;
+}
+```
+
+```html
+<!-- ./_layouts/blog.html -->
+---
+layout: default
+---
+
+{% assign posts = site.posts | sort: 'date' | reverse %}
+<div class="home">
+
+	{{ content }}
+	
+	{% if posts.size > 0 -%}
+	{% for post in posts %}
+	{% if post.categories == page.categories %}
+
+<!-- 기존에 포스트 목록을 ul로 나타내는 대신 div로 나타내 주었다 -->
+	<div class = "blog-container">
+		<div class = "blog-header">
+			<div class = "blog-author--no-cover">
+				<h3>Jongheon</h3>
+			</div>
+		</div>
+		<div class = "blog-body">
+<!-- 포스트의 제목과 생성일을 표시 --> 
+			<div class = "blog-title">
+				<h1><a href="{{post.url|relative_url}}">{{post.title}}</a></h1>
+				{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+				<span class="post-meta">{{post.date | date: date_format}}</span>
+			</div>
+<!-- 포스트 요약을 표시 -->
+			{% if post.summary %}
+			<div class = "blog-summary">
+				<p>{{post.summary}}</p>
+			</div>
+			{% endif %}
+
+<!-- 포스트에 해당하는 태그가 존재할 경우 태그 표시 -->
+			{% if post.tags.size > 0 %}
+			<div class = "blog-tags"><ul>
+				{% assign tags = post.tags %}
+				{% for tag in tags %}
+				<li><a href="#">{{tag}}</a></li>
+				{% endfor %}
+			</ul></div>
+			{% endif %}
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+		{%- if site.show_excerpts -%}
+		{{ post.excerpt }}
+		{%- endif -%}
+	</ul>
+	{%- endif -%}
+</div>
+```
+
+![Post 변경](https://user-images.githubusercontent.com/17156386/78218817-5fbb2380-74f9-11ea-8982-8307bd9122f2.png)

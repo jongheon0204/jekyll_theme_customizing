@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-01T22:56:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-03-30T20:55:37+09:00</published><updated>2020-03-30T20:55:37+09:00</updated><id>http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T16:29:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-03-30T20:55:37+09:00</published><updated>2020-03-30T20:55:37+09:00</updated><id>http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/03/30/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -14,7 +14,49 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">01장 Github 웹 호스팅 이용</title><link href="http://localhost:4000/project/github_blog/2020/03/29/01.html" rel="alternate" type="text/html" title="01장 Github 웹 호스팅 이용" /><published>2020-03-29T11:23:00+09:00</published><updated>2020-03-29T11:23:00+09:00</updated><id>http://localhost:4000/project/github_blog/2020/03/29/01</id><content type="html" xml:base="http://localhost:4000/project/github_blog/2020/03/29/01.html">&lt;p&gt;공부한 내용을 정리하여 블로그로 만들려고 알아보던 중 Github, Tistory, Naver 블로그를 많이 사용한다는 것을 알게 되었습니다.
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">02장 Jekyll 설치 및 기본 테마 적용</title><link href="http://localhost:4000/project/github_blog/2020/03/30/02.html" rel="alternate" type="text/html" title="02장 Jekyll 설치 및 기본 테마 적용" /><published>2020-03-30T09:50:00+09:00</published><updated>2020-03-30T09:50:00+09:00</updated><id>http://localhost:4000/project/github_blog/2020/03/30/02</id><content type="html" xml:base="http://localhost:4000/project/github_blog/2020/03/30/02.html">&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Jekyll은 Ruby로 이루어진 정적 웹 사이트 생성기로서 다음과 같은 특징을 가지고 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Markdown, Liquid로 이루어진 파일을 Html파일로 변환시켜 준다.&lt;/li&gt;
+  &lt;li&gt;모든 게시물은 Html파일로 생성되어 저장되며, 웹 서버는 이 Html파일을 보여준다.&lt;/li&gt;
+  &lt;li&gt;Bootstrap과 같은 프론트 엔드 프레임워크를 이요할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jekyll-설치&quot;&gt;Jekyll 설치&lt;/h2&gt;
+
+&lt;p&gt;Jekyll을 설치하는 방법은 &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;\_blank&quot;&gt;&lt;strong&gt;Jekyll 홈페이지&lt;/strong&gt;&lt;/a&gt;에 접속하여 &lt;strong&gt;Quick-start Instructions&lt;/strong&gt; 을 따라하면 설치할 수 있지만 여기서도 간략하게 적어보도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;Jekyll은 Ruby로 이루어져 있기 때문에, Ruby를 먼저 설치 하여야 합니다.
+&lt;br /&gt;(맥에는 기본적으로 Ruby가 설치되어 있습니다.)
+&lt;br /&gt;Ruby가 설치 되었다면 다음과 같은 명령어를 통해 Jekyll을 설치해 줍니다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 명령어를 통해 Jekyll이 설치 되었다면 이제 Jekyll을 사용할 준비가 된 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;기본-테마minima-theme-생성&quot;&gt;기본 테마(Minima Theme) 생성&lt;/h2&gt;
+
+&lt;p&gt;다음과 같은 명령어를 통해 Jekyll 기본 테마를 생성하고 사이트를 빌드하고 로컬 서버를 실행시켜 줍니다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new blog-name( blog-name으로 폴더가 생성되고 해당 파일들이 들어가게 됩니다. )
+cd blog-name ( Directory 이동 )
+jekyll serve --watch ( 사이트 빌드 및 로컬 서버 실행 )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;빌드가 성공적으로 된후, localhost:4000 에 접속하면 다음과 같이 보이게 됩니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/17156386/77867582-cda1e980-7272-11ea-8ad8-ba184490b489.png&quot; alt=&quot;로컬서버&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;repository에-올려-기본-테마-적용&quot;&gt;Repository에 올려 기본 테마 적용&lt;/h2&gt;
+
+&lt;p&gt;기본 테마를 Repository에 업로드 하기 전 &lt;strong&gt;_config.yml&lt;/strong&gt; 파일의 url을 홈페이지 주소로 변경해 줍니다 
+&lt;br /&gt;(url: “https://jongheon0204.github.io” ,자신의 홈페이지 주소로 변경)
+&lt;br /&gt;이후, &lt;strong&gt;git clone&lt;/strong&gt; 명령어를 통해 생성한 Repository를 다운받고 이전에 생성한 기본 테마 파일들을 옮겨준 후 Repository에 업로드 합니다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone (Repository 주소) // Repository 다운받기
+mv blog-name/* (Repository 파일) // blog-name 하위 모든 파일을 옮긴다.
+git add .
+git commit -m &quot;upload 내용&quot;
+git push origin master // Github에 올리기
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이후, 홈페이지에 접속하면 이전 로컬 서버에서 보았던 홈페이지를 확인하실 수 있습니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/17156386/77867582-cda1e980-7272-11ea-8ad8-ba184490b489.png&quot; alt=&quot;로컬서버&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Jekyll</summary></entry><entry><title type="html">01장 Github 웹 호스팅</title><link href="http://localhost:4000/project/github_blog/2020/03/29/01.html" rel="alternate" type="text/html" title="01장 Github 웹 호스팅" /><published>2020-03-29T11:23:00+09:00</published><updated>2020-03-29T11:23:00+09:00</updated><id>http://localhost:4000/project/github_blog/2020/03/29/01</id><content type="html" xml:base="http://localhost:4000/project/github_blog/2020/03/29/01.html">&lt;p&gt;공부한 내용을 정리하여 블로그로 만들려고 알아보던 중 Github, Tistory, Naver 블로그를 많이 사용한다는 것을 알게 되었습니다.
 &lt;br /&gt;이중, 저는 무료로 웹 호스팅을 제공해 주는 Github와 정적 웹 사이트 생성기인 Jekyll을 이용하여 블로그를 만들어 볼 계획입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;github-웹-호스팅-이용하기&quot;&gt;Github 웹 호스팅 이용하기&lt;/h2&gt;
@@ -39,4 +81,4 @@
 &lt;/ol&gt;
 
 &lt;p&gt;오늘은 간단한 과정을 통해 Github 웹 호스팅을 이용하는 방법에 대해서 알아 보았습니다.
-&lt;br /&gt;이후 과정으로는 Jekyll에 대한 소개와 테마 적용등의 과정을 차례대로 알아 보도록 하겠습니다.&lt;/p&gt;</content><author><name></name></author><summary type="html">공부한 내용을 정리하여 블로그로 만들려고 알아보던 중 Github, Tistory, Naver 블로그를 많이 사용한다는 것을 알게 되었습니다. 이중, 저는 무료로 웹 호스팅을 제공해 주는 Github와 정적 웹 사이트 생성기인 Jekyll을 이용하여 블로그를 만들어 볼 계획입니다.</summary></entry></feed>
+&lt;br /&gt;이후 과정으로는 Jekyll에 대한 소개와 테마 적용등의 과정을 차례대로 알아 보도록 하겠습니다.&lt;/p&gt;</content><author><name></name></author><category term="Github" /><category term="웹 호스팅" /><summary type="html">공부한 내용을 정리하여 블로그로 만들려고 알아보던 중 Github, Tistory, Naver 블로그를 많이 사용한다는 것을 알게 되었습니다. 이중, 저는 무료로 웹 호스팅을 제공해 주는 Github와 정적 웹 사이트 생성기인 Jekyll을 이용하여 블로그를 만들어 볼 계획입니다.</summary></entry></feed>

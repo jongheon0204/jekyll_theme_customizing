@@ -1,0 +1,45 @@
+I"�<h2 id="jekyll">Jekyll</h2>
+
+<p>Jekyll은 Ruby로 이루어진 정적 웹 사이트 생성기로서 다음과 같은 특징을 가지고 있습니다.</p>
+<ul>
+  <li>Markdown, Liquid로 이루어진 파일을 Html파일로 변환시켜 준다.</li>
+  <li>모든 게시물은 Html파일로 생성되어 저장되며, 웹 서버는 이 Html파일을 보여준다.</li>
+  <li>Bootstrap과 같은 프론트 엔드 프레임워크를 이요할 수 있다.</li>
+</ul>
+
+<h2 id="jekyll-설치">Jekyll 설치</h2>
+
+<p>Jekyll을 설치하는 방법은 <a href="https://jekyllrb.com/" target="\_blank"><strong>Jekyll 홈페이지</strong></a>에 접속하여 <strong>Quick-start Instructions</strong> 을 따라하면 설치할 수 있지만 여기서도 간략하게 적어보도록 하겠습니다.</p>
+
+<p>Jekyll은 Ruby로 이루어져 있기 때문에, Ruby를 먼저 설치 하여야 합니다.
+<br />(맥에는 기본적으로 Ruby가 설치되어 있습니다.)
+<br />Ruby가 설치 되었다면 다음과 같은 명령어를 통해 Jekyll을 설치해 줍니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler jekyll
+</code></pre></div></div>
+<p>이 명령어를 통해 Jekyll이 설치 되었다면 이제 Jekyll을 사용할 준비가 된 것입니다.</p>
+
+<h2 id="기본-테마minima-theme-생성">기본 테마(Minima Theme) 생성</h2>
+
+<p>다음과 같은 명령어를 통해 Jekyll 기본 테마를 생성하고 사이트를 빌드하고 로컬 서버를 실행시켜 줍니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new blog-name( blog-name으로 폴더가 생성되고 해당 파일들이 들어가게 됩니다. )
+cd blog-name ( Directory 이동 )
+jekyll serve --watch ( 사이트 빌드 및 로컬 서버 실행 )
+</code></pre></div></div>
+<p>빌드가 성공적으로 된후, localhost:4000 에 접속하면 다음과 같이 보이게 됩니다.
+<img src="https://user-images.githubusercontent.com/17156386/77867582-cda1e980-7272-11ea-8ad8-ba184490b489.png" alt="로컬서버" width="100%" /></p>
+
+<h2 id="repository에-올려-기본-테마-적용">Repository에 올려 기본 테마 적용</h2>
+
+<p>기본 테마를 Repository에 업로드 하기 전 <strong>_config.yml</strong> 파일의 url을 홈페이지 주소로 변경해 줍니다 
+<br />(url: “https://jongheon0204.github.io” ,자신의 홈페이지 주소로 변경)
+<br />이후, <strong>git clone</strong> 명령어를 통해 생성한 Repository를 다운받고 이전에 생성한 기본 테마 파일들을 옮겨준 후 Repository에 업로드 합니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone (Repository 주소) // Repository 다운받기
+mv blog-name/* (Repository 파일) // blog-name 하위 모든 파일을 옮긴다.
+git add .
+git commit -m "upload 내용"
+git push origin master // Github에 올리기
+</code></pre></div></div>
+<p>이후, 홈페이지에 접속하면 이전 로컬 서버에서 보았던 홈페이지를 확인하실 수 있습니다.
+<img src="https://user-images.githubusercontent.com/17156386/77867582-cda1e980-7272-11ea-8ad8-ba184490b489.png" alt="로컬서버" width="100%" /></p>
+
+:ET
