@@ -17,11 +17,12 @@
 <script type="application/ld+json">
 {"url":"http://localhost:4000/","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Home","name":"Your awesome title","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
-<body id = "blog-body"><header class="site-header" role="banner">
+<link rel="stylesheet" href="/assets/main.css">
+	<link rel="stylesheet" href="/assets/home.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body id = "blog-body">
+		<header class="site-header" role="banner">
 	<nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
 
-	<a class = "navbar-brand" href="#">Your awesome title</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -73,30 +74,65 @@
 </nav>
 
 </header>
-<main class="page-content" aria-label="Content">
-			<div class="wrapper">
-				<div class="home"><h1 class="page-heading">Home</h1>
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Mar 30, 2020</span>
-        <h3>
-          <a class="post-link" href="/jekyll/update/2020/03/30/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li><li><span class="post-meta">Mar 30, 2020</span>
-        <h3>
-          <a class="post-link" href="/project/github_blog/2020/03/30/02.html">
-            02장 Jekyll 설치 및 기본 테마 적용
-          </a>
-        </h3></li><li><span class="post-meta">Mar 29, 2020</span>
-        <h3>
-          <a class="post-link" href="/project/github_blog/2020/03/29/01.html">
-            01장 Github 웹 호스팅
-          </a>
-        </h3></li></ul>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
-
+		<main class="page-content" aria-label="Content">
+			<div class = "intro-header">
+	<div class = "bg-overlay">
+		<div class = "container">
+			
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class = "intro-message">
+						<h1>Your awesome title</h1>
+						<h3>Portfolio Web Page</h3>
+					</div>
+				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<section id = "portfolio" class = "bg-light-gray bounds"> 
+	<section>
+		<div class="overlay"> 
+			<div class="description">
+				<p> Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of  hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of  color customization to reflect company branding.  </p> 
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>PHP</li>
+					<li>BEM</li>
+					<li>SASS</li>
+					<li>Sketch</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688745/codepen/portfolio/venditore.png" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>WordPress (WooCommerce) Theme: Venditore</h4>
+		</div>
+	</section>
+
+	<section>
+		<div class = "overlay">
+			<div class = "description">
+				<p>Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of 
+											hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of 
+											color customization to reflect company branding.</p>
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>Python</li>
+					<li>Selenium</li>
+					<li>Test</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688773/codepen/portfolio/editorial_excel.jpg" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>Editorial Monitoring Job - Automated</h4>
+		</div>
+	</section>
+
+</section>
+
+<br>
+
+
 		</main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 

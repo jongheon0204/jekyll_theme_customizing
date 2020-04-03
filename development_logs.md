@@ -335,3 +335,88 @@ layout: default
 ```
 
 ![Post 변경](https://user-images.githubusercontent.com/17156386/78218817-5fbb2380-74f9-11ea-8982-8307bd9122f2.png)
+
+## 2020-04-03
+
+### 01. Home에 Portfolio 레이아웃 적용 
+
+기존의 Home 화면은 모든 포스트 리스트를 보여주었고, 이를 보완하고자 하였습니다.
+<br>생각을 하다 Codepen에서 Portfolio 레이아웃을 검색한 후, 사용할 만한 레이아웃을 3개 찾게 되었습니다.
+
+1) [Inifinito Web Design Studio - Portfolio Zipline](https://codepen.io/ThiagoFerreir4/pen/eNMxEp)
+2) [Portfolio Website](https://codepen.io/LewisBriffa/pen/BoyZYd?editors=1000)
+3) [Horizontal Portfolio](https://codepen.io/WebSonick/pen/JkLcf)
+
+목표는 위의 3 레이아웃중 어느 한 가지 레이아웃만을 사용하는게 아닌 한 가지 특징 씩 가져와서 사용하는 것입니다.
+
+#### 순서
+
+1. assets 폴더 안에 home.scss 파일을 만든 후, 1, 2번 레이아웃의 css 코드를 넣어준다.
+2. \_layouts 폴더 안에 default.html에서 div class = "wrapper" 를 지워준다.
+3. \_layouts 폴더 안에 home.html에서 section을 나누어 꾸며준다.
+
+```html
+<!-- ./_layouts/home.html -->
+---
+layout: default
+---
+
+<!-- 1번 레이아웃에서 첫 번째 section을 가져온다 -->
+<div class = "intro-header">
+	<div class = "bg-overlay">
+		<div class = "container">
+			
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class = "intro-message">
+						<h1>{{site.title}}</h1>
+						<h3>Portfolio Web Page</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 2번째 레이아웃에서 portfolio 관련 코드를 넣어준다 -->
+<section id = "portfolio" class = "bg-light-gray bounds"> 
+	<section>
+		<div class="overlay"> 
+			<div class="description">
+				<p> Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of  hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of  color customization to reflect company branding.  </p> 
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>PHP</li>
+					<li>BEM</li>
+					<li>SASS</li>
+					<li>Sketch</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688745/codepen/portfolio/venditore.png" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>WordPress (WooCommerce) Theme: Venditore</h4>
+		</div>
+	</section>
+
+	<section>
+		<div class = "overlay">
+			<div class = "description">
+				<p>Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of 
+											hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of 
+											color customization to reflect company branding.</p>
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>Python</li>
+					<li>Selenium</li>
+					<li>Test</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688773/codepen/portfolio/editorial_excel.jpg" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>Editorial Monitoring Job - Automated</h4>
+		</div>
+	</section>
+
+</section>
+```  
+
+![home01](https://user-images.githubusercontent.com/17156386/78368828-32f13400-75ff-11ea-9fba-8b8b57e501c5.png)
+![home02](https://user-images.githubusercontent.com/17156386/78368846-3b496f00-75ff-11ea-88ed-3b187ea7e7d5.png)

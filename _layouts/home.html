@@ -2,33 +2,59 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+<div class = "intro-header">
+	<div class = "bg-overlay">
+		<div class = "container">
+			
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class = "intro-message">
+						<h1>{{site.title}}</h1>
+						<h3>Portfolio Web Page</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+<section id = "portfolio" class = "bg-light-gray bounds"> 
+	<section>
+		<div class="overlay"> 
+			<div class="description">
+				<p> Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of  hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of  color customization to reflect company branding.  </p> 
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>PHP</li>
+					<li>BEM</li>
+					<li>SASS</li>
+					<li>Sketch</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688745/codepen/portfolio/venditore.png" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>WordPress (WooCommerce) Theme: Venditore</h4>
+		</div>
+	</section>
+
+	<section>
+		<div class = "overlay">
+			<div class = "description">
+				<p>Designed using Sketch, developed using PHP whilst incorporating the BEM methodology. A wide range of 
+											hooks and filters were utilized to create an E-Commerece themed WordPress site that offers a high degree of 
+											color customization to reflect company branding.</p>
+				<h6>Tools<span class="glyphicon glyphicon-cog"></span></h6>
+				<ul class="tools vertical-list">
+					<li>Python</li>
+					<li>Selenium</li>
+					<li>Test</li>
+				</ul>
+			</div>
+			<img src="https://res.cloudinary.com/dj7k0lade/image/upload/v1526688773/codepen/portfolio/editorial_excel.jpg" alt="Editorial Monitoring Automated Excel Screenshot">
+			<h4 class="heading"><span class="glyphicon glyphicon-hand-up"></span>Editorial Monitoring Job - Automated</h4>
+		</div>
+	</section>
+
+</section>
+
+<br>
+
