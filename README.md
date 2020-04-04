@@ -420,3 +420,41 @@ layout: default
 
 ![home01](https://user-images.githubusercontent.com/17156386/78368828-32f13400-75ff-11ea-9fba-8b8b57e501c5.png)
 ![home02](https://user-images.githubusercontent.com/17156386/78368846-3b496f00-75ff-11ea-88ed-3b187ea7e7d5.png)
+
+## 2020-04-04
+
+### 01. Home.scss 코드 정리
+
+497줄이나 되는 Home.scss 코드에서 필요 없는 부분들을 삭제 하고, 공통 코드들을 묶어 주었으며, 여러 레이아웃에서 가져온 css다 보니 이름이 동일한 id, class들에 대해서 수정작업을 진행하여 187줄 코드로 줄이는 작업을 하였다.
+
+### 02. Portfolio에 Horizontal Scroll 적용
+
+Home 화면의 Project 들을 나타내는 부분에서 Project의 개수가 4개 이상이 될 경우, 박스의 범위를 초과하여 개행된 후, Project Section이 보여지는 현상이 발생하게 되었다.
+<br>개행이 된 후, Project Section이 보여지는것 보다는 Horizontal Scroll을 이용하여 개수가 많이 추가 되더라도, 스크롤을 통해서 볼 수 있게 하는게 좋을 것 같아 이를 번경해 주었다.
+
+```css
+/* ./assets/home.scss 의 horizontal scroll 적용 부분 */
+
+#second_section{
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+/* id가 second_section인 div 안의 section에만 적용 */
+
+	section{
+		height: 100%;
+		width: 330px;
+		overflow: auto;
+		margin-left: 10px;
+		margin-right: 10px;
+/* white-space 는 속성을 상속받기 때문에 다시 normal로 지정해 주어야 한다. */
+		white-space: normal;
+/* display를 inline-block으로 설정시, block이 가로 형태로 하나씩 생기게 된다 */
+		display: inline-block;
+		background-color: rgba(4,14,22,0.83);
+	}
+```
+
+![home01](https://user-images.githubusercontent.com/17156386/78418936-b51f3e00-767b-11ea-92d0-3c429f4e0a8d.png)
+![home02](https://user-images.githubusercontent.com/17156386/78418939-bbadb580-767b-11ea-8744-f7d1b3e33027.png) 
