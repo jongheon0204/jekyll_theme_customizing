@@ -13,7 +13,7 @@
 @media (max-width: 767px) { .intro-message { padding: 75px; }
   .intro-message h1 { font-size: 3em; } }
 
-#second_section { color: black; overflow-x: auto; overflow-y: hidden; white-space: nowrap; background: url("https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg") no-repeat center center fixed; }
+#second_section { color: black; overflow-x: auto; overflow-y: hidden; white-space: nowrap; background: url("https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg") center center fixed; }
 
 #second_section section { height: 100%; width: 330px; overflow: auto; margin-left: 10px; margin-right: 10px; white-space: normal; display: inline-block; background-color: rgba(4, 14, 22, 0.83); }
 

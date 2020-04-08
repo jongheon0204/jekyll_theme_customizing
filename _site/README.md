@@ -458,3 +458,54 @@ Home 화면의 Project 들을 나타내는 부분에서 Project의 개수가 4�
 
 ![home01](https://user-images.githubusercontent.com/17156386/78418936-b51f3e00-767b-11ea-92d0-3c429f4e0a8d.png)
 ![home02](https://user-images.githubusercontent.com/17156386/78418939-bbadb580-767b-11ea-8744-f7d1b3e33027.png) 
+
+## 2020-04-08
+
+### 01. Portfolio에 Project부분 수정
+
+기존 Portfolio에는 Project를 추가하기 위해서는 사람이 코드를 일일이 입력해 줘야 했다.
+<br>물론 동일한 구조이기 때문에 복사하면 되지만 그것보다는 jekyll을 이용하여 여러 정보만 입력하면 자동으로 생성이 되도록 해 주었다.
+
+```html
+<!-- ./_layouts/home.html 의 second_section 부분 수정 -->
+
+<!-- 사람이 코드를 복사 붙여넣기가 아닌 md파일로 만들면 자동으로 반영이 되도록 한다-->
+<section id = "second_section" class = "home_section">
+<!-- 모든 html파일중 project 값이 true인 html 파일들을 가져온다 -->
+	{% assign projects = site.html_pages | where_exp: "page","page.project == true" | sort : 'order' %}
+	{% for project in projects %}
+	<a href = "{{project.link}}" target="_blank">
+		<section>
+			<div class = "overlay">
+				<div class = "description">
+					<p>{{project.description}}</p>
+					<h6>Tools<span class = "glyphicon glyphicon-cog"></span></h6>
+					{% assign tools = project.tools %}
+					<ul class = "tools vertical-list">
+						{% for tool in tools %}
+						<li>{{tool}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<img alt = "{{project.title}}" src = "{{project.img_link}}">
+				<h4 class = "heading"><span class = "glyphicon glyphicon-hand-up"></span>{{project.title}}</h4>
+			</div>
+		</section>
+	</a>
+	{% endfor %}
+</section>
+```
+
+```markdown
+---
+project: true
+title: Github Blog Theme
+order: 1
+link: https://github.com/jongheon0204/jekyll_theme_customizing
+description : Github 웹 호스팅 기능에 정적 웹 사이트 생성기인 Jekyll을 결합하여 블로그 테마를 제작하게 되었다. <br>제작하게 된 이유는 기존의 Jekyll 테마는 많았지만 무료는 업데이트가 오랫동안 안된 경우가 많았으며, 최신의 예쁜 테마들은 유료여이기 때문이다. <br>Jekyll의 기본 테마인 Minima의 구조를 사용하고 여기에 Bootstrap의 여러 기능을 추가해 주었으며 Codepen에서 Blog에 사용할 만한 레이아웃들을 참조하였다.
+tools : [Github, Jekyll, Bootstrap]
+img_link : https://user-images.githubusercontent.com/17156386/78416684-8f873a00-7665-11ea-9e8c-74ff4e55dd6c.png
+---
+```
+
+실제로 ./resources/project 폴더에 Github_Blog_Theme.md 파일을 만들어 위와 같이 입력해 준다면 Project가 자동으로 보여진다.
