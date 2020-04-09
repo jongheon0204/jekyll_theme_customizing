@@ -11,7 +11,11 @@ layout: default
 	</div>
 </div>
 
-<section id = "second_section" class = "home_section">
+<div id = "second_section">
+
+</div>
+
+<section id = "third_section" class = "home_section">
 	{% assign projects = site.html_pages | where_exp: "page","page.project == true" | sort : 'order' %}
 	{% for project in projects %}
 	<a href = "{{project.link}}" target="_blank">

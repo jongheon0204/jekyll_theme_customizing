@@ -509,3 +509,21 @@ img_link : https://user-images.githubusercontent.com/17156386/78416684-8f873a00-
 ```
 
 실제로 ./resources/project 폴더에 Github_Blog_Theme.md 파일을 만들어 위와 같이 입력해 준다면 Project가 자동으로 보여진다.
+
+## 2020-04-09
+
+### 01. Footer 변경
+
+기존의 Footer는 Theme에 맞지 않아 Copyright을 보여주는 걸로 변경하였다.
+
+```css
+// ./assets/main.scss 에서 footer에 사용되는 css 변경
+
+.site-footer { 
+	color: white;
+	text-align: center;
+	background-color: #343a40;
+	border-top: 1px solid #e8e8e8;
+	padding: 30px 0;
+}
+```

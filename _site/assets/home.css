@@ -13,56 +13,56 @@
 @media (max-width: 767px) { .intro-message { padding: 75px; }
   .intro-message h1 { font-size: 3em; } }
 
-#second_section { color: black; overflow-x: auto; overflow-y: hidden; white-space: nowrap; background: url("https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg") center center fixed; }
+#third_section { color: black; overflow-x: auto; overflow-y: hidden; white-space: nowrap; background: url("https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg") center center fixed; }
 
-#second_section section { height: 100%; width: 330px; overflow: auto; margin-left: 10px; margin-right: 10px; white-space: normal; display: inline-block; background-color: rgba(4, 14, 22, 0.83); }
+#third_section section { height: 100%; width: 330px; overflow: auto; margin-left: 10px; margin-right: 10px; white-space: normal; display: inline-block; background-color: rgba(4, 14, 22, 0.83); }
 
-#second_section h2 { color: #F0F0F0; margin-bottom: 140px; }
+#third_section h2 { color: #F0F0F0; margin-bottom: 140px; }
 
-#second_section h2:after { border-bottom: 2px dashed #b4b4b4; }
+#third_section h2:after { border-bottom: 2px dashed #b4b4b4; }
 
-#second_section h6 { color: #f0f0f0; }
+#third_section h6 { color: #f0f0f0; }
 
-#second_section .row { margin: 0px; box-sizing: border-box; padding: 0 60px; }
+#third_section .row { margin: 0px; box-sizing: border-box; padding: 0 60px; }
 
-#second_section .heading { color: #F0F0F0; padding: 15px; text-align: center; position: absolute; font-size: 18px; letter-spacing: 2px; }
+#third_section .heading { color: #F0F0F0; padding: 15px; text-align: center; position: absolute; font-size: 18px; letter-spacing: 2px; }
 
-#second_section .heading span { color: #635757; display: block; margin: 40px 0px; font-size: 200%; }
+#third_section .heading span { color: #635757; display: block; margin: 40px 0px; font-size: 200%; }
 
-#second_section .description { position: absolute; top: 0px; left: 0px; padding: 15px; }
+#third_section .description { position: absolute; top: 0px; left: 0px; padding: 15px; }
 
-#second_section .description > * { display: none; font-size: 72%; }
+#third_section .description > * { display: none; font-size: 72%; }
 
-#second_section p { color: #F0F0F0; margin-bottom: 30px; line-height: 230%; }
+#third_section p { color: #F0F0F0; margin-bottom: 30px; line-height: 230%; }
 
-#second_section p, #second_section .tools { width: 100%; }
+#third_section p, #third_section .tools { width: 100%; }
 
-#second_section .description span { margin-left: 10px; }
+#third_section .description span { margin-left: 10px; }
 
-#second_section .description .tools { margin-top: 20px; overflow: hidden; }
+#third_section .description .tools { margin-top: 20px; overflow: hidden; }
 
-#second_section .description .tools li { margin-top: 5px; background-color: #114190; margin-right: 10px; padding: 10px; color: #F0F0F0; list-style: none; }
+#third_section .description .tools li { margin-top: 5px; background-color: #114190; margin-right: 10px; padding: 10px; color: #F0F0F0; list-style: none; }
 
-#second_section div section { cursor: pointer; }
+#third_section div section { cursor: pointer; }
 
-#second_section img { width: 100%; }
+#third_section img { width: 100%; }
 
-#second_section .overlay { position: relative; padding-bottom: 0px; height: 100%; overflow: auto; }
+#third_section .overlay { position: relative; padding-bottom: 0px; height: 100%; overflow: auto; }
 
-#second_section .description h4 { color: white; }
+#third_section .description h4 { color: white; }
 
-#second_section .heading { position: relative; margin: 0 auto; }
+#third_section .heading { position: relative; margin: 0 auto; }
 
-#second_section .vertical-list li { float: left; }
+#third_section .vertical-list li { float: left; }
 
-#second_section section:hover .overlay img { opacity: 0; transition: opacity .32s; }
+#third_section section:hover .overlay img { opacity: 0; transition: opacity .32s; }
 
-#second_section section:hover .description { top: 100px; transition: top .5s; }
+#third_section section:hover .description { top: 100px; transition: top .5s; }
 
-#second_section section:hover .overlay .heading span { -webkit-transform: rotate(180deg); position: relative; top: 0px; left: -30px; color: rgba(4, 14, 22, 0.83); }
+#third_section section:hover .overlay .heading span { -webkit-transform: rotate(180deg); position: relative; top: 0px; left: -30px; color: rgba(4, 14, 22, 0.83); }
 
-#second_section section:hover .overlay .description > * { display: block; }
+#third_section section:hover .overlay .description > * { display: block; }
 
-#second_section section:hover .overlay .heading { position: absolute; top: 0px; transition: top .9s; }
+#third_section section:hover .overlay .heading { position: absolute; top: 0px; transition: top .9s; }
 
 /*# sourceMappingURL=home.css.map */
